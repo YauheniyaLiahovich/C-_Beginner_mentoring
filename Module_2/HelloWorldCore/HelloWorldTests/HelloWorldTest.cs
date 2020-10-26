@@ -1,7 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 using System;
-using HelloWorldCore;
 
 namespace HelloWorldTests
 {
@@ -15,7 +14,7 @@ namespace HelloWorldTests
             using (var sw = new StringWriter())
             {
                 Console.SetOut(sw);
-                Program.Main();
+                HelloWorldCore.Program.Main();
 
                 var result = sw.ToString().Trim();
                 Assert.AreEqual(Expected, result);
